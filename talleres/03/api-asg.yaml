@@ -60,7 +60,7 @@ Resources:
         - !Ref AWS::Region
         - AmiId
       InstanceType: t2.micro
-      KeyName: mythical-mysfits
+      #KeyName: MYUSE1KP
       SecurityGroups:
         - !GetAtt InstanceSG.GroupId
       UserData:
