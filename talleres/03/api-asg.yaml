@@ -75,5 +75,19 @@ Resources:
           cd ~/bootcamp-module-devops/backend/
           pip install -r requirements.txt
           nohup gunicorn -w 3 -b 0.0.0.0:8000 app:app &
-        
-  # AutoScalingGroup:
+
+  AutoScaling:    
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      AvailabilityZones: !GetAZs
+      DesiredCapacity: 1
+      LaunchConfigurationName: !Ref LaunchConfiguration
+      LoadBalancerNames: 
+        - !Ref LoadBalancer
+      MaxSize: 2
+      MinSize: 1
+      Tags: 
+        - Key: Name
+          PropagateAtLaunch: True
+          Value: taller03
+    
