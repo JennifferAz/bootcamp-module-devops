@@ -92,11 +92,11 @@ Resources:
           Value: taller03
           
   ScheduledActionOff: 
-  Type: AWS::AutoScaling::ScheduledAction
-  Properties:
-    AutoScalingGroupName: !Ref AutoScaling
-    DesiredCapacity: 0
-    Recurrence: "0 18 * * *"
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: !Ref AutoScaling
+      DesiredCapacity: 0
+      Recurrence: "0 18 * * *"
       
   ScheduledActionUp: 
     Type: AWS::AutoScaling::ScheduledAction
