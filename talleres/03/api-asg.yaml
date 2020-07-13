@@ -60,7 +60,7 @@ Resources:
         - !Ref AWS::Region
         - AmiId
       InstanceType: t2.micro
-      #KeyName: MYUSE1KP
+      KeyName: MyUSE1KP
       SecurityGroups:
         - !GetAtt InstanceSG.GroupId
       UserData:
