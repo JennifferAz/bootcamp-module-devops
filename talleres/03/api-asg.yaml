@@ -90,4 +90,19 @@ Resources:
         - Key: Name
           PropagateAtLaunch: True
           Value: taller03
-    
+          
+  ScheduledActionOff: 
+  Type: AWS::AutoScaling::ScheduledAction
+  Properties:
+    AutoScalingGroupName: !Ref AutoScaling
+    DesiredCapacity: 0
+    Recurrence: "0 18 * * *"
+      
+  ScheduledActionUp: 
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: !Ref AutoScaling
+      DesiredCapacity: 2
+      MaxSize: 3
+      MinSize: 1
+      Recurrence: "0 9 * * *"
