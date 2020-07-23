@@ -1,5 +1,5 @@
 {
-    "executionRoleArn": "REPLACE_ME_TASK_EXECUTION_ARN",
+    "executionRoleArn": "mysfits-ecs-TaskExecutionRole-B3675U0QM09V",
     "requiresCompatibilities": ["FARGATE"],
     "family": "mysfits-ecs-prod-backend",
     "memory": "512",

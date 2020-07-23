@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    ECR_URI: REPLACE_ME_ECR_URI
+    ECR_URI: 637842762930.dkr.ecr.us-east-1.amazonaws.com/mysfits-ecs-backend
 
 phases:
   pre_build:
